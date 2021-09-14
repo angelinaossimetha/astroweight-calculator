@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Calibri");
+
+body {
+  background-image: url('test/outerspace.jpg');
+  font-size: 150%;
+  font-family: Calibri;
+  color: white;
+} 
+div.a {
+   text-align: center;
+   height: 200px;
+}
+div.info {    
+    text-align: center;
+}
