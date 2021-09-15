@@ -3,23 +3,42 @@
   <body>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Astro Weight Calculator</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
      <!-- Write your markup here  -->
     <div class="a"> 
-      <h1>Astro Weight Calculator</h1>
+      <h1 class="title is-1"style="color:white">Astro Weight Calculator</h1>
+      <!-- <h1>Astro Weight Calculator</h1> -->
     </div>
-    <div class="info">
+    
+      <section>
+        <div>
+          <label for="pluto" style="font: 9px;"> Click to remove Pluto from dropdown menu</label>
+          <input type="checkbox" onclick="removePluto()" id="pluto" value="pluto"><br>
+        </div>
+        <div> 
+        <label for="planet-name">Enter planet name and multiplier (optional):</label>
+        <input id="planet-name" type="text"  placeholder="Planet name" style="height:30px;font-size:14pt;background-color: #f8f8f8;" />
+        <input type=”number” id="planet-multiplier" placeholder="Multiplier" style="height:30px;font-size:14pt;background-color: #f8f8f8;" />
+        <button id="new-planet" onclick="addPlanet()" style="height:30px;font-size:14pt;background-color: green;">Add Planet </button>
+        </div><br>
+        <div>
+          <label for="planets">Pick a planet :</label>
+          <select id="planets" style="height:30px;font-size:14pt;"></select>
+        </div>
+      <div >
         <label for="user-weight">Enter weight :</label>
-        <input id="user-weight" type="text" placeholder="Weight (lbs)" style="height:30px;font-size:14pt;background-color: #f8f8f8; color: black;" />
-        <label for="planets">Pick a planet :</label>
-        <select id="planets" style="height:30px;font-size:14pt;"></select>
+        <input id="user-weight" type="text" placeholder="Weight (lbs)" style="height:30px;font-size:14pt;background-color: #f8f8f8; color: black;"/><br>
+      </div>
+      <div class="info">     
         <p id="output"></p> 
-        <button id="calculate-button" onclick="handleClickEvent(this.value)" style="height:30px;font-size:14pt;">Calculate</button>
-    </div> 
-
+        <button id="calculate-button" onclick="handleClickEvent(this.value)" style="height:30px;font-size:14pt;background-color: green;">Calculate</button></div>
+    </section>
     <script src="main.js" charset="utf-8">
-    </script>
+    </script> 
   </body>
 </html>

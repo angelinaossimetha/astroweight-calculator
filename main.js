@@ -1,4 +1,3 @@
-// Write your JavaScript code here! 
 var planets = [ 
     ['Pluto', 0.06], 
     ['Neptune', 1.148], 
@@ -31,6 +30,30 @@ function calculateWeight(weight, planetName) {
     return map.get(planetName) * weight; 
     
 } 
+
+function removePluto() { 
+    var opts = document.getElementById("planets").getElementsByTagName('option');
+    var count = 0; 
+    for(var i = 0; i < opts.length; i++){
+    if (opts[i].value == "Pluto"){
+        opts[i].parentNode.removeChild(opts[i]);
+        count += 1; 
+    }
+} 
+if (count == 0) { 
+    createOption(["Pluto", map.get("Pluto")]);
+}
+
+}
+
+function addPlanet() { 
+    var name =  document.getElementById('planet-name').value;
+    var multiplier =  document.getElementById('planet-multiplier').value;
+    if (name != "" & multiplier != "") {
+    map.set(name, multiplier); 
+    createOption([name, multiplier]);
+    } 
+}
 
 function handleClickEvent(e) {
      // 3. Create a variable called userWeight and assign the value of the user's weight. 
